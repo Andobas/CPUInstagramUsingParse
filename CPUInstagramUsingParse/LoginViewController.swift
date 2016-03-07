@@ -29,8 +29,10 @@ class LoginViewController: UIViewController {
         PFUser.logInWithUsernameInBackground(usernameField.text!, password: passwordField.text!) { (user: PFUser?, error: NSError?) -> Void in
             if user != nil {
                 print("you're logged in!")
-                
+                //logging in
                 self.performSegueWithIdentifier("loginSegue", sender: nil)
+            } else {
+                print("could not log in")
             }
         }
     }

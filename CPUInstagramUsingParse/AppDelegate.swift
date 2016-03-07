@@ -24,8 +24,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 configuration.server = "https://instagram-parse.herokuapp.com/parse"
             })
         )
+        
+        //if user is logged in
+        if PFUser.currentUser() != nil {
+            
+            //skip login
+            let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("TabBarViewController")
+            window?.rootViewController = viewController
+        }
         return true
     }
+    
+    func onlogOut () {
+        let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("LoginViewController")
+        window?.rootViewController = viewController
+    }
+    
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
