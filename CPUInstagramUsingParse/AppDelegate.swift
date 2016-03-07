@@ -32,7 +32,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("TabBarViewController")
             window?.rootViewController = viewController
         }
+        
+        
+        UITabBar.appearance().tintColor = UIColor(
+            red: 0x62/255,
+            green: 0xA3/255,
+            blue: 0x10/255,
+            alpha: 1.0)
+        
         return true
+        
     }
     
     func onlogOut () {
