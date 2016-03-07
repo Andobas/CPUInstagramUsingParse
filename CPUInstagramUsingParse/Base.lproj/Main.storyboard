@@ -42,7 +42,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.30523462579999999" green="0.63137254899999995" blue="0.43446643109999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -108,10 +108,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O26-RH-OZn" customClass="PFImageView">
-                                                    <rect key="frame" x="28" y="19" width="265" height="128"/>
+                                                    <rect key="frame" x="28" y="10" width="251" height="161"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Caption" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xR-GL-A92">
-                                                    <rect key="frame" x="28" y="155" width="265" height="32"/>
+                                                    <rect key="frame" x="28" y="171" width="265" height="32"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -179,6 +179,10 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="uag-4Z-QHg" appends="YES" id="mSu-RO-kNR"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="wuP-kK-KdV">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="CIj-3v-9ZJ">
@@ -199,6 +203,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Chm-c7-DgO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="uag-4Z-QHg">
+                    <connections>
+                        <action selector="onTap:" destination="Ej0-YL-eSb" id="UUc-CV-Qri"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1866" y="112"/>
         </scene>
@@ -225,7 +234,7 @@
         <scene sceneID="6cg-j9-zYq">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pYt-GI-7B3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" id="yW5-Bp-79i"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="user-2.png" id="yW5-Bp-79i"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8gZ-en-6zv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -244,7 +253,7 @@
         <scene sceneID="ZOW-Lb-di2">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b4q-nJ-U8K" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Capture" id="D5X-eE-FxI"/>
+                    <tabBarItem key="tabBarItem" title="Capture" image="Camera-Front.png" id="D5X-eE-FxI"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="txV-qj-Auk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -263,7 +272,7 @@
         <scene sceneID="pJT-6i-XrD">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pb9-rK-5wU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="iaw-eI-Nbb"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.png" id="iaw-eI-Nbb"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Mc-Ko-C8L">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -279,4 +288,9 @@
             <point key="canvasLocation" x="1470" y="786"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Camera-Front.png" width="48" height="48"/>
+        <image name="house.png" width="48" height="48"/>
+        <image name="user-2.png" width="48" height="48"/>
+    </resources>
 </document>

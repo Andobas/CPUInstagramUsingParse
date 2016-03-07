@@ -18,6 +18,11 @@ class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, 
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Looks for single or multiple taps.
+//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+//        view.addGestureRecognizer(tap)
+    
 
         // Do any additional setup after loading the view.
     }
@@ -90,6 +95,12 @@ class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, 
         return newImage
     }
 
+    @IBAction func onTap(sender: AnyObject) {
+        view.endEditing(true)
+    }
+    
+    
+    
 
     /*
     // MARK: - Navigation
